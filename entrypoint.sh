@@ -33,7 +33,7 @@ tailscale wait --timeout=120s
 
 # Userspace networking has no tailscale0 interface. Tailscale Serve's raw TCP
 # forwarder makes the loopback SSH daemon available privately to the tailnet.
-tailscale serve --tcp="$TAILSCALE_SSH_PORT" "tcp://127.0.0.1:${SSH_PORT}" --bg
+tailscale serve --bg --tcp "$TAILSCALE_SSH_PORT" "tcp://127.0.0.1:${SSH_PORT}"
 
 echo "Tailscale SSH bridge ready: ssh -p ${TAILSCALE_SSH_PORT} root@<tailscale-ip>"
 tailscale status
