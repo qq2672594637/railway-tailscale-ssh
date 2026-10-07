@@ -1,3 +1,5 @@
+详细的换号/重部署操作手册见 [OPERATIONS.md](OPERATIONS.md).
+
 # Railway Tailscale container with OpenSSH
 
 The container joins your Tailscale tailnet and runs OpenSSH locally. Because Railway normally does not provide `/dev/net/tun`, the image uses Tailscale userspace networking and `tailscale serve` to forward a private tailnet TCP port to the local SSH server. No Railway public domain or TCP Proxy is required.
