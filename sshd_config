@@ -1,0 +1,17 @@
+Port 22
+AddressFamily any
+ListenAddress 127.0.0.1
+HostKey /data/ssh/ssh_host_ed25519_key
+PermitRootLogin prohibit-password
+PubkeyAuthentication yes
+AuthorizedKeysFile /root/.ssh/authorized_keys
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitEmptyPasswords no
+AllowUsers root
+X11Forwarding no
+AllowAgentForwarding no
+AllowTcpForwarding yes
+PermitTTY yes
+LoginGraceTime 30
+MaxAuthTries 3
